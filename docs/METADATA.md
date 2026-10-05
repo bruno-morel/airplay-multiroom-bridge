@@ -41,6 +41,16 @@ not carry an old album or artist into a new track. Late work checks both session
 and track generation before attachment. When source ordering is ambiguous, expose
 unknown rather than guessing an association.
 
+## Experience invariants
+
+Within one track, do not clear valid metadata between partial packets. Publish
+coherent revisions; on a confirmed track change publish a new-track snapshot with
+unknown fields where necessary, never old artwork attached to new text. Explicit
+pause is not disconnect. Reject stale progress updates while allowing an explicit
+seek to move position backwards. Expose reconnecting outputs without interrupting
+healthy playback. Reconnect continuity/timeout policy remains a decision; do not
+reuse a terminated session merely to hide a disconnect.
+
 ## Source volume is an event
 
 Source volume is separate from normal track metadata even if it shares a transport.

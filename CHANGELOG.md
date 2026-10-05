@@ -4,6 +4,10 @@
 
 ### Added
 
+- Sequential task IDs, completion evidence and next-task tracking reconciled with
+  the earlier planning chat; recovered offline CLI, bypass, fixtures and tooling tasks.
+- Explicit metadata transition experience invariants.
+
 - Project scope, architecture, metadata/state model, roadmap and speculative ideas.
 - C11/CMake interface library, compile/run scaffold test and GitHub Actions CI.
 - Reserved source, public-header, example and systemd packaging directories.

@@ -47,7 +47,7 @@ Pi hardware and ARM64 validation remain required before any supported release.
 ## Project documentation
 
 - [Architecture](docs/ARCHITECTURE.md): boundaries and behavioral contracts.
-- [Plan](docs/PLAN.md): committed roadmap, acceptance gates and open decisions.
+- [Plan](docs/PLAN.md): living sequential checklist, current/next task, acceptance gates and open decisions.
 - [Metadata](docs/METADATA.md): canonical state, artwork and volume semantics.
 - [Ideas](docs/IDEAS.md): uncommitted proposals, not an implementation queue.
 - [Contributor rules](AGENTS.md) and [changelog](CHANGELOG.md).

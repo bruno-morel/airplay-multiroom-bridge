@@ -4,7 +4,10 @@ This repository currently contains bootstrap scaffolding and design documentatio
 Do not describe planned features as implemented or tested.
 
 - Read `docs/ARCHITECTURE.md` before changing subsystem boundaries or public interfaces.
-- Read `docs/PLAN.md` before changing roadmap or project scope.
+- Read `docs/PLAN.md` before implementing planned work or changing roadmap/scope.
+- Work through its task IDs sequentially. Update current/next status and check off
+  completed items with verification evidence in the same change; record blockers
+  without marking incomplete work done.
 - Read `docs/METADATA.md` before modifying metadata, artwork, volume-event or state behavior.
 - `docs/IDEAS.md` is not an implementation queue. Obtain an explicit scope decision
   and update the plan before implementing speculative features.
