@@ -16,9 +16,8 @@ handoff and preceding design discussion in **AirPlay Speaker Setup** on
 The chat called these phases 0–11; the bootstrap table uses steps 1–12.
 **Step = phase + 1.** Use the stable task IDs below when reporting progress.
 
-**Current:** bootstrap code/docs and CI are complete; one recovered phase-0
-formatting/lint task remains. Application implementation has not started.
-**Active:** P0.5 — establish formatting/lint rules and checks.
+**Current:** Phase 0 is complete, including formatting/lint checks.
+Application implementation has not started.
 **Next:** P1.1 — settle
 the scalar DSP contract and test expectations before implementation.
 
@@ -80,9 +79,11 @@ placeholder directory exists. No schedule or release date is committed.
 - [x] P0.2 Document scope, architecture, metadata, ideas and contributor safety rules.
 - [x] P0.3 Configure/build the C11 scaffold and pass its CTest check locally.
 - [x] P0.4 Pass GCC/Clang GitHub CI with read-only permissions and a pinned action.
-- [ ] P0.5 Establish formatter/linter rules and reproducible checks; verify on the
-  existing scaffold. This detail was present in the earlier chat but omitted from
-  the condensed bootstrap handoff.
+- [x] P0.5 Establish formatter/linter rules and reproducible checks; verify on the
+  existing scaffold. Implemented in `bf55fdd`; see `DEVELOPMENT.md`.
+  Local format-check, lint, normal/quality builds and CTest passed. Negative
+  probes confirmed formatting and null-dereference diagnostics fail the checks.
+  [CI passed: GCC, Clang and quality job](https://github.com/bruno-morel/airplay-multiroom-bridge/actions/runs/37336499248).
 
 Gate: all bootstrap checks and P0.5 pass. Production Muffliatus remains untouched.
 If useful later, capture sanitized installation-specific reference examples only
