@@ -44,6 +44,9 @@ Use `-DBUILD_TESTING=OFF` for a configure-only interface target build.
 GitHub Actions performs scaffold checks with GCC and Clang on x86-64 Linux.
 Pi hardware and ARM64 validation remain required before any supported release.
 
+For pinned formatting/static-analysis tools and commands, see
+[Development checks](docs/DEVELOPMENT.md). Normal builds do not require these tools.
+
 ## Project documentation
 
 - [Architecture](docs/ARCHITECTURE.md): boundaries and behavioral contracts.

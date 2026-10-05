@@ -18,7 +18,8 @@ The chat called these phases 0–11; the bootstrap table uses steps 1–12.
 
 **Current:** bootstrap code/docs and CI are complete; one recovered phase-0
 formatting/lint task remains. Application implementation has not started.
-**Next:** P0.5 — establish formatting/lint rules and checks; then P1.1 — settle
+**Active:** P0.5 — establish formatting/lint rules and checks.
+**Next:** P1.1 — settle
 the scalar DSP contract and test expectations before implementation.
 
 Completed bootstrap evidence:

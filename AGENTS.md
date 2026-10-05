@@ -34,6 +34,9 @@ cmake --build build --parallel
 ctest --test-dir build --output-on-failure --no-tests=error
 ```
 
+For C or quality-tooling changes, also run the `format-check` and `lint` targets
+as described in `docs/DEVELOPMENT.md`; use the pinned tool versions.
+
 Keep changes focused. Record behavioral changes in `CHANGELOG.md`; update design
 contracts when behavior changes. Do not add empty production APIs or pretend
 placeholder tests establish runtime correctness. Never commit secrets, recordings,

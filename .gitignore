@@ -7,3 +7,4 @@
 .env.*
 /artwork-cache/
 /recordings/
+/.venv-quality/

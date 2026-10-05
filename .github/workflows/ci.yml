@@ -25,3 +25,23 @@ jobs:
         run: cmake --build build --parallel
       - name: Test
         run: ctest --test-dir build --output-on-failure --no-tests=error
+
+  quality:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install pinned quality tools
+        run: |
+          python3 -m venv .venv-quality
+          .venv-quality/bin/python -m pip install clang-format==18.1.8 clang-tidy==18.1.8
+      - name: Configure
+        run: |
+          cmake -S . -B build-quality -DBUILD_TESTING=ON -DAMB_ENABLE_QUALITY_CHECKS=ON \
+            -DAMB_CLANG_FORMAT="$PWD/.venv-quality/bin/clang-format" \
+            -DAMB_CLANG_TIDY="$PWD/.venv-quality/bin/clang-tidy"
+      - name: Check formatting
+        run: cmake --build build-quality --target format-check
+      - name: Build
+        run: cmake --build build-quality --parallel
+      - name: Static analysis
+        run: cmake --build build-quality --target lint

@@ -4,6 +4,9 @@
 
 ### Added
 
+- P0.5: pinned clang-format/clang-tidy rules, opt-in CMake quality targets, editor
+  settings, development instructions and a mandatory CI quality job.
+
 - Sequential task IDs, completion evidence and next-task tracking reconciled with
   the earlier planning chat; recovered offline CLI, bypass, fixtures and tooling tasks.
 - Explicit metadata transition experience invariants.
